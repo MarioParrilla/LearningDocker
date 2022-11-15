@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  node-app:
+    build: ./
+    ports:
+      - "3000:3000"
+    links:
+      - mongodb
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=mario
+      - MONGO_INITDB_ROOT_PASSWORD=admin
