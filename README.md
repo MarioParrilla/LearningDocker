@@ -1,4 +1,4 @@
-#IMAGES
+# IMAGES
 
 **docker images** -> show you all images with details
 
@@ -7,8 +7,8 @@
 
 **docker image rm imageName:imageVersion** -> allow you to remove images
 
-#CONTAINERS
-###CREATE
+# CONTAINERS
+### CREATE
 **docker create imageName:imageVersion** -> allow you to create a container, give you the container ID
 
 **docker create --name customContainerName imageName:imageVersion** -> allow you to create a container with a customContainerName, give you the container ID
@@ -17,10 +17,10 @@
 
 **docker create -pPORTPHYSICAL:PORTOFCONTAINER --network networkName --name customContainerName imageName:imageVersion** -> allow you to create a container with custom port mapping, with a customContainerName and with one network, give you the container ID
 
-###RUN
+### RUN
 **docker run -pPORTPHYSICAL:PORTOFCONTAINER --network networkName --name customContainerName imageName:imageVersion -d** -> do all of before
 
-###OTHERS
+### OTHERS
 **docker start containerID** -> allow you to start one container by containerID or containerName
 
 **docker stop containerID** -> allow you to stop one container by containerID or containerName
@@ -33,7 +33,7 @@
 **docker logs containerID/containerName** -> show you all logs of the container
 **docker logs --follow containerID/containerName** -> show you all logs of the container
 
-#NETWORK
+# NETWORK
 
 **docker network create networkName** -> create a network
 
@@ -41,7 +41,7 @@
 
 **docker network ls** -> show you all networks created
 
-#DOCKERFILE (Dockerfile)
+# DOCKERFILE (Dockerfile)
 
 **docker build -t imageName:imageTag route(for example: ./)** -> to create a image from dockerfile
 <pre>
@@ -52,7 +52,7 @@ EXPOSE portOfApp -> physical port mapped
 CMD ["java", "-jar","/home/app/Main.jar"] -> command to run our app 
 </pre>
 
-#DOCKER COMPOSE (docker-compose.yml)
+# DOCKER COMPOSE (docker-compose.yml)
 
 **docker compose up** -> to create the containers with compose
 **docker compose down** -> to remove the containers with compose
